@@ -1,0 +1,39 @@
+<template name="home_posts">
+    <div class="row">
+
+
+        <div class="container-fluid" style="background-color: cornflowerblue; border-radius: 10px;  border-style: dotted;">
+            <h2>SHow Posts</h2>
+            {{#each posts}}
+                {{>postsTemplate3}}
+            {{/each}}
+        </div>
+    </div>
+</template>
+<!------------not added anywhere else???------>
+<template name="postsTemplate3">
+    <div class="row">
+        <h3>I want to show a post!</h3>
+        <div class="col-md-12" style="min-height: 100px; background-color: beige; border-style: dotted; border-width: medium; border-radius: 35px;">
+
+            <div class="row" style="background-color: orange">
+
+                <div class="{{#if checked}}strikethrough{{/if}} col-md-6"  style="background-color: chocolate">
+                    <input type="checkbox" checked="{{checked}}" class="toggle-checked">
+                    <span class="{{#if checked}}strikethrough{{/if}}">{{title}}</span>
+                </div>
+
+                <div class="col-md-6">
+                    <span class="{{#if checked}}strikethrough{{/if}}">{{createdAt}}</span>
+                </div>
+            </div>
+
+
+            <div class="container-fluid">
+                <code class="text">{{returnBody}}</code>
+            </div>
+            <div class="row">
+                <button class="delete btn-danger">Remove</button></div>
+        </div>
+        </div>
+        </template>

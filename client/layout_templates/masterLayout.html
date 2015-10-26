@@ -1,0 +1,33 @@
+<template name="masterLayout">
+    {{>header}}
+    <body>
+    <div class="container" style="background-color: antiquewhite">
+        <div class="row"><div class="col-md-12">
+            {{>nav}} <!--home at first-->
+        </div>
+        </div>
+
+
+        <div class="container" style="background-color: antiquewhite">
+            <div class="row"><div class="col-md-12">
+                {{>yield}} <!--home at first-->
+            </div>
+            </div>
+
+
+            <div class="container-fluid">
+                <div class="row"><div class="col-md-12">
+                    {{>footer}} <!--home at first-->
+                </div>
+                </div>
+            </div>
+            <!--insert footer-->
+        </div>
+    </div>
+    </body>
+</template>
+
+
+
+
+
